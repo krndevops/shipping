@@ -5,7 +5,7 @@ COPY              ./ /app
 RUN               mvn package; mv target/shipping-1.0.jar shipping.jar
 
 
-FROM              amazoncorreto:17
+FROM              amazoncorretto:17
 RUN               mkdir /app
 WORKDIR           /app
 ADD               newrelic.jar /app
