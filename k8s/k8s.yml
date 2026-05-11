@@ -11,7 +11,7 @@ spec:
       targetPort: 8080
 ---
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
   name: shipping
   labels:
@@ -69,7 +69,7 @@ metadata:
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
-    kind: ReplicaSet
+    kind: Deployment
     name: shipping
   minReplicas: 1
   maxReplicas: 10
